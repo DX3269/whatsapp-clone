@@ -1,0 +1,116 @@
+/* Main container for the entire sidebar */
+.chatListContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #fff;
+}
+
+/* Header section with avatar and icons */
+.chatListHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background-color: #f0f2f5;
+    border-bottom: 1px solid #e9edef;
+}
+.headerUserInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.headerUserName {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.headerAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.headerIcons {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    color: #54656f;
+}
+
+/* Search bar section */
+.searchContainer {
+    padding: 8px 12px;
+    background-color: #fff;
+    border-bottom: 1px solid #e9edef;
+}
+.searchInput {
+    color: black;
+    width: 100%;
+    padding: 9px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #f0f2f5;
+    font-size: 14px;
+}
+.searchInput:focus {
+    outline: none;
+}
+
+/* List of all conversations */
+.conversationList {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Individual chat item */
+.conversationItem {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-top: 1px solid #f0f2f5;
+    height: 72px;
+}
+.conversationItem:hover {
+    background-color: #f5f5f5;
+}
+.convoAvatar {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.convoDetails {
+    flex-grow: 1;
+    overflow: hidden;
+}
+.convoHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.convoName {
+    color: #111b21;
+    font-weight: 600;
+    font-size: 16px;
+}
+.convoTimestamp {
+    font-size: 12px;
+    color: #667781;
+}
+.convoLastMessage {
+    font-size: 14px;
+    color: #667781;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}

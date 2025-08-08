@@ -1,0 +1,49 @@
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+}
+
+.container {
+  display: flex;
+  width: 95%;
+  max-width: 1600px;
+  height: 95vh;
+  background-color: #fff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.sidebar {
+  flex: 30%; /* Sidebar takes 30% of the width */
+  border-right: 1px solid #e0e0e0;
+  overflow-y: auto;
+}
+
+.chatWindow {
+  flex: 70%; /* Chat window takes the remaining 70% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+}
+
+.noChatSelected {
+  text-align: center;
+  color: #41525d; /* Sets a default dark gray color */
+  border-bottom: 6px solid #42cba5; /* Adds the green bar at the bottom */
+  padding: 0 50px 50px 50px;
+}
+
+.noChatSelected h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.noChatSelected p {
+  font-size: 14px;
+  line-height: 20px;
+}
