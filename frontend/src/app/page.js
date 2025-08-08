@@ -13,7 +13,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5002/api/messages/conversations')
+    axios.get('https://whatsapp-clone-backend-fer5.onrender.com/api/messages/conversations')
       .then(response => {
         setConversations(response.data);
         setLoading(false);
@@ -25,7 +25,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const socket = io('http://localhost:5002');
+    const socket = io('https://whatsapp-clone-backend-fer5.onrender.com');
     
     socket.on('new_message', (newMessage) => {
       setConversations(prevConversations => {

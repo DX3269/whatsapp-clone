@@ -20,7 +20,7 @@ const ChatWindow = ({ chat }) => {
         if (!chat) return;
         setLoading(true);
         const source = axios.CancelToken.source();
-        axios.get(`http://localhost:5002/api/messages/conversations/${chat._id}`, { cancelToken: source.token })
+        axios.get(`https://whatsapp-clone-backend-fer5.onrender.com/api/messages/conversations/${chat._id}`, { cancelToken: source.token })
             .then(response => {
                 setMessages(response.data);
                 setLoading(false);
@@ -37,7 +37,7 @@ const ChatWindow = ({ chat }) => {
     }, [chat]);
 
     useEffect(() => {
-        const socket = io('http://localhost:5002');
+        const socket = io('https://whatsapp-clone-backend-fer5.onrender.com');
         socket.on('new_message', (incomingMessage) => {
             if (chat && incomingMessage.wa_id === chat._id) {
                 setMessages(prevMessages =>
@@ -89,7 +89,7 @@ const ChatWindow = ({ chat }) => {
         setMessages(prevMessages => [...prevMessages, optimisticMessage]);
         setNewMessage('');
         try {
-            await axios.post('http://localhost:5002/api/messages/send', {
+            await axios.post('https://whatsapp-clone-backend-fer5.onrender.com/api/messages/send', {
                 wa_id: chat._id,
                 name: chat.name,
                 body: newMessage,
